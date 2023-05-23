@@ -1,0 +1,342 @@
+/* 初始化 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    /* background-color: rgba(36, 182, 255, 0.516); */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+canvas {
+    
+    background-image: url(img/Map1.png);
+    background-size: 1400px 700px;
+    cursor: pointer;
+}
+
+/* 游戏本体 */
+#Game {
+    position: relative;
+
+    display: inline-block;
+}
+
+#gameover{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    color:aqua;
+    font-size: 152px;
+    letter-spacing: 6px;
+    font-weight: 900;
+    -webkit-text-stroke: 4px rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    display: none;
+    
+}
+
+/* 游戏介绍按钮 */
+#descri {
+    margin: 5px;
+    padding: 5px;
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.331);
+    z-index: 9;
+}
+
+.buttons {
+    color: white;
+    background-color: transparent;
+}
+
+
+/* 游戏介绍 */
+#introduce {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    /* display: none; */
+    z-index: 8;
+    color: aqua;
+}
+#introduce>h3{
+    letter-spacing: 2px;
+}
+
+#introduce>ul {
+    padding: 10px;
+    backdrop-filter: blur(4px);
+    border-radius: 25px;
+}
+
+/* 设置游戏介绍里的排版 */
+#introduce>ul>li {
+    display: flex;
+    border-radius: 25px;
+    border: 1px solid black;
+    margin: 5% 0;
+}
+
+#introduce>ul>li>ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#introduce>ul>li>ul>li {
+    font-size: 10px;
+}
+
+#introduce img {
+    width: 50%;
+    height: 50%;
+}
+
+/* 设置取消按钮 */
+#introduce>ul>button {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 46px;
+    color: white;
+    background-color: rgb(165, 13, 13);
+    border-radius: 50%;
+    border: none;
+    transition: 1s;
+    cursor: pointer;
+}
+
+#introduce>ul>button:hover {
+    background-color: red;
+    transform: rotate(360deg) scale(0.8);
+}
+
+
+/* 开始游戏按钮 */
+#StartGame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+    z-index: 5;
+    
+}
+
+#StartGame>button {
+    width: 20%;
+    height: 12%;
+    border: none;
+    font-size: 40px;
+    color: rgba(44, 44, 44, 0.317);
+    border-radius:15px;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+    transition: 1s;
+}
+
+#StartGame:hover button{
+    color: rgb(0, 0, 0);
+    border: 4px solid rgb(0, 213, 255);
+    color:aqua
+    
+}
+
+/* 表单提交 */
+#Form{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    display: none;
+    z-index: 9;
+}
+#Form h3{
+    font-size: 36px;
+    letter-spacing: 6px;
+    color:rgb(0, 255, 247);
+    margin-bottom: 20px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #000000;
+    
+}
+#Form input{
+    
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    color:white;
+    outline: none;
+    border: none;
+    border: 1px solid rgb(105, 239, 252);
+    letter-spacing: 2px;
+    transition: 0.5s;
+    
+    
+   
+}
+#Form input::placeholder{
+    color:aqua;
+}
+#Form input:focus{
+    width: 200px;
+    border: none;
+    outline:2px solid aqua;
+    border-radius: 10px;
+  
+}
+#Form button{
+    margin-left: 5px;
+    border: none;
+    width: 60px;
+    height: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: aqua;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+
+/* 排行 */
+#listBu{
+    position: absolute;
+    margin: 5px;
+    left: 100px;
+    padding:5px;
+    background-color: transparent;
+    background-color: #00000055;
+    cursor: pointer;
+    z-index: 8;
+}
+#list{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+}
+
+table{
+    width: 300px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    border-collapse: collapse;
+    font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+    
+}
+table>thead{
+    color:white;
+}
+table>tbody{
+    color:rgb(48, 255, 238);
+}
+
+tr,th{
+    border: 2px groove #000000;
+}
+
+/* 游戏数据 */
+#data{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#data>ul{
+    display: flex;
+}
+#data>ul>li{
+    margin: 0 15px;
+    font-size: 22px;
+    text-align: center;
+    color:rgba(0, 0, 0, 0.938);
+}
+#data>ul>li:nth-child(1)>i:before{
+    animation: 24s turn infinite linear ;
+    
+}
+
+
+#data>ul>li:nth-child(2)>a{
+    font-size: 16px;
+}
+#data>ul>li:nth-child(2){
+    color:rgb(255, 199, 16);
+}
+#data>ul>li:nth-child(3){
+    color:rgb(255, 24, 16);
+}
+#data>ul>li:nth-child(3)>i::before{
+    animation: 1.5s love infinite linear;
+}
+
+@keyframes turn{
+    0%{
+        transform: rotate(0deg);
+    }
+
+ 
+
+    50%{
+        transform: rotate(980deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes love{
+    0%{
+        transform: scale(1);
+    }
+
+ 
+
+    50%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+
+

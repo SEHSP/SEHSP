@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>塔防游戏</title>
+</head>
+
+<body>
+    <!-- 游戏本体 -->
+    <div id="Game">
+
+        <!-- 游戏介绍 buttons-->
+        <button id="descri" class="buttons">
+            游戏介绍
+        </button>
+        <div id="introduce">
+            <h3>通过放置防御炮塔保护防线，不能有任何敌人通过，否则游戏结束。</h3>
+            <ul>
+                <!-- 塔防 -->
+                <li>
+                    <ul>
+                        <!-- 塔防一 -->
+                        <li>
+                            <img src="img/arms1.png" alt="">
+                            <!-- 防御塔的属性 -->
+                            <div>威力：2</div>
+                            <div>攻速：4</div>
+                            <div>攻击范围：160</div>
+                            <div>价格：20金币</div>
+                        </li>
+                        <!-- 塔防二 -->
+                        <li>
+                            <img src="img/arms2.png" alt="">
+                            <!-- 防御塔的属性 -->
+                            <div>威力：4</div>
+                            <div>攻速：3</div>
+                            <div>攻击范围：150</div>
+                            <div>价格：30金币</div>
+                        </li>
+                        <!-- 塔防三 -->
+                        <li>
+                            <img src="img/arms3.png" alt="">
+                            <!-- 防御塔的属性 -->
+                            <div>威力：10</div>
+                            <div>攻速：3</div>
+                            <div>攻击范围：130</div>
+                            <div>价格：50金币</div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>
+                        <!-- 敌人一 -->
+                        <li>
+                            <img src="img/enemy1.webp" alt="">
+                            <!-- 敌人的属性 -->
+                            <div>移动速度：0.5</div>
+                            <div>血量：20</div>
+                            <div>价值：10</div>
+                        </li>
+                        <!-- 敌人二 -->
+                        <li>
+                            <img src="img/enemy2.webp" alt="">
+                            <!-- 敌人的属性 -->
+                            <div>移动速度：0.5</div>
+                            <div>血量：40</div>
+                            <div>价值：15</div>
+                        </li>
+                        <!-- 敌人三 -->
+                        <li>
+                            <img src="img/enemy3.webp" alt="">
+                            <!-- 敌人的属性 -->
+                            <div>移动速度：0.5</div>
+                            <div>血量：60</div>
+                            <div>价值：30</div>
+                        </li>
+                    </ul>
+                </li>
+                <!-- 取消符号 -->
+                <button id="Cancel">&#215;</button>
+            </ul>
+        </div>
+
+        <!-- 开始游戏按钮 -->
+        <div id="StartGame">
+            <button>开始游戏</button>
+        </div>
+
+        <!-- 提交表单 -->
+        <div id="Form">
+            <h3>大获全胜</h3>
+            <div>
+                <input type="text" placeholder="请输入">
+                <button>提交</button>
+            </div>
+        </div>
+
+        <!-- 排行榜 -->
+        <button id="listBu" class="">排行榜</button>
+        <div id="list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>玩家</th>
+                        <th>金币</th>
+                        <th>耗时</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?</td>
+                        <td>?s</td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+
+        </div>
+
+        <!-- 时间，金币，生命 -->
+        <div id="data">
+            <ul>
+                <li class="lispan1">
+                    <i class="bi bi-hourglass-split"></i><span>0.00</span><a>s</a>
+                </li>
+                <li class="lispan2">
+                    <i class="bi bi-currency-exchange"></i><span>50</span><a>&#165;</a>
+                </li>
+                <li class="lispan3">
+                    <i class="bi bi-heart-fill"></i>&nbsp;<span>1</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 游戏结束 -->
+        <div id="gameover">
+            GAME OVER!
+        </div>
+        <!-- 游戏 -->
+        <canvas></canvas>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/response.js"></script>
+    <script src="js/roads.js"></script>
+    <script src="js/class.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/ranking.js"></script>
+</body>
+
+</html>
